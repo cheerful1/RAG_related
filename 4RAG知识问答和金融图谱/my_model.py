@@ -38,7 +38,7 @@ class QwenLLM(LLM):
               stop: Optional[List[str]] = None,
               run_manager: Optional[CallbackManagerForLLMRun] = None,
               **kwargs: Any):
-        completion = self.client.completions.create(model="qwen2:72b", 
+        completion = self.client.completions.create(model="llama3.1:latest", 
                                                     prompt=prompt,
                                                     temperature=kwargs.get('temperature', 0.1),
                                                     top_p=kwargs.get('top_p', 0.9),
